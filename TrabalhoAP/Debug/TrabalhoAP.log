@@ -1,0 +1,62 @@
+﻿  main.cpp
+c:\users\karbust\onedrive - estgv\projetos vs\trabalhoap\trabalhoap\main.cpp(30): error C2144: syntax error: 'char' should be preceded by ';'
+c:\users\karbust\onedrive - estgv\projetos vs\trabalhoap\trabalhoap\main.cpp(46): error C3861: 'isspace': identifier not found
+c:\users\karbust\onedrive - estgv\projetos vs\trabalhoap\trabalhoap\main.cpp(62): error C2819: type 'Servicos' does not have an overloaded member 'operator ->'
+  c:\users\karbust\onedrive - estgv\projetos vs\trabalhoap\trabalhoap\main.cpp(21): note: see declaration of 'Servicos'
+  c:\users\karbust\onedrive - estgv\projetos vs\trabalhoap\trabalhoap\main.cpp(62): note: did you intend to use '.' instead?
+c:\users\karbust\onedrive - estgv\projetos vs\trabalhoap\trabalhoap\main.cpp(62): error C2232: '->Servicos::codigo': left operand has 'struct' type, use '.'
+c:\users\karbust\onedrive - estgv\projetos vs\trabalhoap\trabalhoap\main.cpp(62): warning C4473: 'scanf' : not enough arguments passed for format string
+  c:\users\karbust\onedrive - estgv\projetos vs\trabalhoap\trabalhoap\main.cpp(62): note: placeholders and their parameters expect 1 variadic arguments, but 0 were provided
+  c:\users\karbust\onedrive - estgv\projetos vs\trabalhoap\trabalhoap\main.cpp(62): note: the missing variadic argument 1 is required by format string '%i'
+c:\users\karbust\onedrive - estgv\projetos vs\trabalhoap\trabalhoap\main.cpp(64): error C2143: syntax error: missing ';' before ')'
+c:\users\karbust\onedrive - estgv\projetos vs\trabalhoap\trabalhoap\main.cpp(64): error C2143: syntax error: missing ';' before '{'
+c:\users\karbust\onedrive - estgv\projetos vs\trabalhoap\trabalhoap\main.cpp(64): error C2143: syntax error: missing ')' before '{'
+c:\users\karbust\onedrive - estgv\projetos vs\trabalhoap\trabalhoap\main.cpp(65): error C2059: syntax error: '=='
+c:\users\karbust\onedrive - estgv\projetos vs\trabalhoap\trabalhoap\main.cpp(65): error C2143: syntax error: missing ';' before '{'
+c:\users\karbust\onedrive - estgv\projetos vs\trabalhoap\trabalhoap\main.cpp(68): error C2181: illegal else without matching if
+c:\users\karbust\onedrive - estgv\projetos vs\trabalhoap\trabalhoap\main.cpp(69): error C2059: syntax error: '='
+c:\users\karbust\onedrive - estgv\projetos vs\trabalhoap\trabalhoap\main.cpp(78): error C2819: type 'Clientes' does not have an overloaded member 'operator ->'
+  c:\users\karbust\onedrive - estgv\projetos vs\trabalhoap\trabalhoap\main.cpp(7): note: see declaration of 'Clientes'
+  c:\users\karbust\onedrive - estgv\projetos vs\trabalhoap\trabalhoap\main.cpp(78): note: did you intend to use '.' instead?
+c:\users\karbust\onedrive - estgv\projetos vs\trabalhoap\trabalhoap\main.cpp(78): error C2232: '->Clientes::existe': left operand has 'struct' type, use '.'
+c:\users\karbust\onedrive - estgv\projetos vs\trabalhoap\trabalhoap\main.cpp(79): error C2065: 'p': undeclared identifier
+c:\users\karbust\onedrive - estgv\projetos vs\trabalhoap\trabalhoap\main.cpp(83): error C2819: type 'Clientes' does not have an overloaded member 'operator ->'
+  c:\users\karbust\onedrive - estgv\projetos vs\trabalhoap\trabalhoap\main.cpp(7): note: see declaration of 'Clientes'
+  c:\users\karbust\onedrive - estgv\projetos vs\trabalhoap\trabalhoap\main.cpp(83): note: did you intend to use '.' instead?
+c:\users\karbust\onedrive - estgv\projetos vs\trabalhoap\trabalhoap\main.cpp(83): error C2232: '->Clientes::codigo': left operand has 'struct' type, use '.'
+c:\users\karbust\onedrive - estgv\projetos vs\trabalhoap\trabalhoap\main.cpp(83): warning C4473: 'scanf' : not enough arguments passed for format string
+  c:\users\karbust\onedrive - estgv\projetos vs\trabalhoap\trabalhoap\main.cpp(83): note: placeholders and their parameters expect 1 variadic arguments, but 0 were provided
+  c:\users\karbust\onedrive - estgv\projetos vs\trabalhoap\trabalhoap\main.cpp(83): note: the missing variadic argument 1 is required by format string '%i'
+c:\users\karbust\onedrive - estgv\projetos vs\trabalhoap\trabalhoap\main.cpp(85): error C2819: type 'Clientes' does not have an overloaded member 'operator ->'
+  c:\users\karbust\onedrive - estgv\projetos vs\trabalhoap\trabalhoap\main.cpp(7): note: see declaration of 'Clientes'
+  c:\users\karbust\onedrive - estgv\projetos vs\trabalhoap\trabalhoap\main.cpp(85): note: did you intend to use '.' instead?
+c:\users\karbust\onedrive - estgv\projetos vs\trabalhoap\trabalhoap\main.cpp(85): error C2232: '->Clientes::nome': left operand has 'struct' type, use '.'
+c:\users\karbust\onedrive - estgv\projetos vs\trabalhoap\trabalhoap\main.cpp(85): error C2660: 'trim': function does not take 1 arguments
+  c:\users\karbust\onedrive - estgv\projetos vs\trabalhoap\trabalhoap\main.cpp(42): note: see declaration of 'trim'
+c:\users\karbust\onedrive - estgv\projetos vs\trabalhoap\trabalhoap\main.cpp(87): error C2819: type 'Clientes' does not have an overloaded member 'operator ->'
+  c:\users\karbust\onedrive - estgv\projetos vs\trabalhoap\trabalhoap\main.cpp(7): note: see declaration of 'Clientes'
+  c:\users\karbust\onedrive - estgv\projetos vs\trabalhoap\trabalhoap\main.cpp(87): note: did you intend to use '.' instead?
+c:\users\karbust\onedrive - estgv\projetos vs\trabalhoap\trabalhoap\main.cpp(87): error C2232: '->Clientes::nif': left operand has 'struct' type, use '.'
+c:\users\karbust\onedrive - estgv\projetos vs\trabalhoap\trabalhoap\main.cpp(87): warning C4473: 'scanf' : not enough arguments passed for format string
+  c:\users\karbust\onedrive - estgv\projetos vs\trabalhoap\trabalhoap\main.cpp(87): note: placeholders and their parameters expect 1 variadic arguments, but 0 were provided
+  c:\users\karbust\onedrive - estgv\projetos vs\trabalhoap\trabalhoap\main.cpp(87): note: the missing variadic argument 1 is required by format string '%i'
+c:\users\karbust\onedrive - estgv\projetos vs\trabalhoap\trabalhoap\main.cpp(89): error C2819: type 'Clientes' does not have an overloaded member 'operator ->'
+  c:\users\karbust\onedrive - estgv\projetos vs\trabalhoap\trabalhoap\main.cpp(7): note: see declaration of 'Clientes'
+  c:\users\karbust\onedrive - estgv\projetos vs\trabalhoap\trabalhoap\main.cpp(89): note: did you intend to use '.' instead?
+c:\users\karbust\onedrive - estgv\projetos vs\trabalhoap\trabalhoap\main.cpp(89): error C2232: '->Clientes::morada': left operand has 'struct' type, use '.'
+c:\users\karbust\onedrive - estgv\projetos vs\trabalhoap\trabalhoap\main.cpp(89): error C2660: 'trim': function does not take 1 arguments
+  c:\users\karbust\onedrive - estgv\projetos vs\trabalhoap\trabalhoap\main.cpp(42): note: see declaration of 'trim'
+c:\users\karbust\onedrive - estgv\projetos vs\trabalhoap\trabalhoap\main.cpp(91): error C2819: type 'Clientes' does not have an overloaded member 'operator ->'
+  c:\users\karbust\onedrive - estgv\projetos vs\trabalhoap\trabalhoap\main.cpp(7): note: see declaration of 'Clientes'
+  c:\users\karbust\onedrive - estgv\projetos vs\trabalhoap\trabalhoap\main.cpp(91): note: did you intend to use '.' instead?
+c:\users\karbust\onedrive - estgv\projetos vs\trabalhoap\trabalhoap\main.cpp(91): error C2232: '->Clientes::contato': left operand has 'struct' type, use '.'
+c:\users\karbust\onedrive - estgv\projetos vs\trabalhoap\trabalhoap\main.cpp(91): warning C4473: 'scanf' : not enough arguments passed for format string
+  c:\users\karbust\onedrive - estgv\projetos vs\trabalhoap\trabalhoap\main.cpp(91): note: placeholders and their parameters expect 1 variadic arguments, but 0 were provided
+  c:\users\karbust\onedrive - estgv\projetos vs\trabalhoap\trabalhoap\main.cpp(91): note: the missing variadic argument 1 is required by format string '%i'
+c:\users\karbust\onedrive - estgv\projetos vs\trabalhoap\trabalhoap\main.cpp(92): error C2819: type 'Clientes' does not have an overloaded member 'operator ->'
+  c:\users\karbust\onedrive - estgv\projetos vs\trabalhoap\trabalhoap\main.cpp(7): note: see declaration of 'Clientes'
+  c:\users\karbust\onedrive - estgv\projetos vs\trabalhoap\trabalhoap\main.cpp(92): note: did you intend to use '.' instead?
+c:\users\karbust\onedrive - estgv\projetos vs\trabalhoap\trabalhoap\main.cpp(92): error C2232: '->Clientes::existe': left operand has 'struct' type, use '.'
+c:\users\karbust\onedrive - estgv\projetos vs\trabalhoap\trabalhoap\main.cpp(105): error C2065: 'SERVIÇOS': undeclared identifier
+c:\users\karbust\onedrive - estgv\projetos vs\trabalhoap\trabalhoap\main.cpp(105): error C2146: syntax error: missing ';' before identifier 'serviço'
+c:\users\karbust\onedrive - estgv\projetos vs\trabalhoap\trabalhoap\main.cpp(105): error C2065: 'serviço': undeclared identifier
