@@ -12,12 +12,12 @@ typedef struct Clientes {
 	char morada[80];
 	int contato;
 	int existe;
-}CLIENTES;
+}*CLIENTES;
 
 typedef struct Contratados {
 	int data;
 	char necessidade[50];
-}CONTRATADOS;
+}*CONTRATADOS;
 
 typedef struct Servicos {
 	int codigo;
@@ -25,18 +25,18 @@ typedef struct Servicos {
 	char equipamento[50];
 	char estado[20];
 	double preco;
-}SERVICOS;
+}*SERVICOS;
 
 typedef struct Funcionario {
-	char login[25];
-	char password[25];
 	int id;
-}FUNCIONARIO;
+	char login[10];
+	char password[16];
+}*FUNCIONARIO;
 
 typedef struct Admin {
 	char login[25];
 	char password[25];
-}ADMIN;
+}*ADMIN;
 
 void inicializa(CLIENTES *c, int n) {
 	int i;
@@ -46,68 +46,94 @@ void inicializa(CLIENTES *c, int n) {
 	}
 }
 
-void testeFuncionario(FUNCIONARIO *f, char login, char password) {
+void menuInicial() 
+{
+	FILE *fp;
 
+	FUNCIONARIO *f;
+
+	char login[10], password[16]; int i; char c;
+	FUNCIONARIO pUser = (struct Funcionario *)malloc(sizeof(struct Funcionario));
+
+	if ((fp = fopen("funcionarios.dat", "r+")) == NULL) 
+	{
+			printf("Não foi possível abrir o ficheiro.\n");
+			exit(1);
+	}
+	printf("Username: ");
+	scanf("%9s", login);
+	printf("Password: ");
+	scanf("%15s", password);
+	while (fread(pUser, sizeof(struct Funcionario), 1, fp) == 1) {
+		if (strcmp(pUser->login, login) == 0) {
+			if (strcmp(pUser->password, password) == 0) {
+				menuFuncionario();
+			}
+		}
+	}
+
+	free(pUser);
+	fclose(fp);
 }
 
-void menuInicial() {
-	printf(" ---------------------------------------------\n");
-	printf(" |Bem-vindo a loja de computadores Nova Era  |\n");
-	printf(" ---------------------------------------------\n\n\n");
-	printf(" ------------------------------------------------\n");
-	printf(" |Por favor, indique o tipo de acesso que deseja|\n");
-	printf(" |----------------------------------------------|\n");
-	printf(" |1. Administrador                              |\n");
-	printf(" |2. Funcionário                                |\n");
-	printf(" |3. Cliente                                    |\n");
-	printf(" |----------------------------------------------|\n\n");
-	printf(" Número do tipo de acesso: ");
-}
-
-void menuAdmin() {
-	printf(" ---------------------------------------------\n");
-}
-
-void loginFuncionario(FUNCIONARIO *f) {
-	char login, password;
-
-	printf(" --------------------------------------------------------\n");
-	printf(" |Por favor insira suas credenciais de acesso ao sistema|\n");
-	printf(" --------------------------------------------------------\n\n");
-	printf(" Login: ");
-	scanf("%s", &login);
-	printf(" Password: ");
-	scanf("%s", &password);
-
-	testeFuncionario(f, login, password);
-}
-
-void menuFuncionario() {
+void menuFuncionario() 
+{
 	printf(" ---------------------------------------------\n");
 	printf(" |          Bem-vindo Funcionário             |\n");
 	printf(" ---------------------------------------------\n");
-}
+	printf(" ---------------------------------------------\n");
+	printf(" |      Por favor, o que deseja efetuar?      |\n");
+	printf(" |--------------------------------------------|\n");
+	printf(" |1. Criar Cliente                            |\n");
+	printf(" |2. Criar Funcionário                        |\n");
+	printf(" |3. Criar Serviço                            |\n");
+	printf(" |--------------------------------------------|\n\n");
+	printf(" Número do tipo de acesso: ");
 
-void menuCliente() {
-	printf(" ---------------------------------------------\n");
-	printf(" |          Bem-vindo Cliente                |\n");
-	printf(" ---------------------------------------------\n");
+	CLIENTES cliente[30];
+	FUNCIONARIO funcionario[20];
+	SERVICOS servico[15];
+	int choiceInicial = 1;
+
+	do 
+	{
+		if (choiceInicial < 1 || choiceInicial > 3) 
+			printf(" Número de operação inválido, por favor escolha um correto.\n\n");
+
+		scanf("%i", &choiceInicial);
+		system("cls");
+	} while (choiceInicial < 1 || choiceInicial > 3);
+
+	switch (choiceInicial) 
+	{
+		case 1:
+			registroC(cliente);
+			break;
+
+		case 2:
+			registroF(funcionario);
+			break;
+
+		case 3:
+			registroS(servico);
+			break;
+	}
 }
 
 void registroS(SERVICOS *s, int n) {
 	int i, codigo, flag = 1;
 
 	printf("Digite o código desejado do novo serviço: ");
-	scanf("%i", &s->codigo);
+	scanf("%i", &(*s)->codigo);
 
 	for (i = 0; i < n && flag == 1; i++) {
-		if (s->codigo == codigo) {
+		if ((*s)->codigo == codigo) {
 			printf("O código atribuído já pertence a outro serviço.");
 			flag = 0;
 		}
 		else {
-			if (s->codigo == 0) {
-				s->codigo = codigo;
+			if ((*s)->codigo == 0) {
+				(*s)->codigo = codigo;
 			}
 			else {
 				s++;
@@ -120,39 +146,39 @@ void registroC(CLIENTES *c, int n) {
 	char nome[50];
 	int i;
 
-	for (i = 0; i < n && c->existe == 1; i++) {
+	for (i = 0; i < n && (*c)->existe == 1; i++) {
 		c++;
 	}
 
 	printf("Digite o código do serviço desejado: ");
-	scanf("%i", &c->codigo);
+	scanf("%i", &(*c)->codigo);
 	printf("Digite o seu nome: ");
-	fgets(c->nome, 100, stdin);
+	fgets((*c)->nome, 100, stdin);
 	printf("Digite o seu NIF: ");
-	scanf("%i", &c->nif);
+	scanf("%i", &(*c)->nif);
 	printf("Digite a sua morada: ");
-	fgets(c->morada, 100, stdin);
+	fgets((*c)->morada, 100, stdin);
 	printf("Digite o seu contato: ");
-	scanf("%i", &c->contato);
-	c->existe = 1;
+	scanf("%i", &(*c)->contato);
+	(*c)->existe = 1;
 }
 
 void registroF(FUNCIONARIO *f, int n) {
 	int i, id = 0;
 
-	for (i = 0; i < n && f->id == 0; i++) {
+	for (i = 0; i < n && (*f)->id == 0; i++) {
 		f++;
 		id++;
 	}
 
 	printf("Digite um nome de login: ");
-	scanf("%i", &f->login);
+	scanf("%i", &(*f)->login);
 	printf("Digite uma password: ");
-	scanf("%i", &f->password);
-	f->id = id;
+	scanf("%i", &(*f)->password);
+	(*f)->id = id;
 }
 
-double calculaValor(SERVICOS *s, double valor) {
+double calculaValor(SERVICOS s, double valor) {
 	valor = 10 + s->preco;
 }
 
@@ -162,32 +188,11 @@ int main() {
 	CLIENTES cliente[30];
 	FUNCIONARIO funcionario[20];
 	SERVICOS servico[15];
-	int totalDeClientes, totalDeServicos, choiceInicial = 1;
+	int totalDeClientes, totalDeServicos;
 	double valor;
 	char nome[50], nome2[50];
 
-	do {
-		if (choiceInicial < 1 || choiceInicial > 3) {
-			printf(" Número de operação inválido, por favor escolha um correto.\n\n");
-		}
-		menuInicial();
-		scanf("%i", &choiceInicial);
-		system("cls");
-	} while (choiceInicial < 1 || choiceInicial > 3);
-
-	switch (choiceInicial) {
-	case 1:
-		menuAdmin();
-		break;
-
-	case 2:
-		menuFuncionario(funcionario);
-		break;
-
-	case 3:
-		menuCliente();
-		break;
-	}
+	menuInicial();
 
 	system("pause");
 	return 0;

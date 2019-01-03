@@ -1,0 +1,23 @@
+﻿  main.cpp
+c:\users\karbust\onedrive - estgv\projetos vs\trabalhoap\trabalhoap\main.cpp(45): error C2227: left of '->existe' must point to class/struct/union/generic type
+  c:\users\karbust\onedrive - estgv\projetos vs\trabalhoap\trabalhoap\main.cpp(45): note: type is 'CLIENTES *'
+c:\users\karbust\onedrive - estgv\projetos vs\trabalhoap\trabalhoap\main.cpp(70): error C3861: 'menuFuncionario': identifier not found
+c:\users\karbust\onedrive - estgv\projetos vs\trabalhoap\trabalhoap\main.cpp(109): error C3861: 'registroC': identifier not found
+c:\users\karbust\onedrive - estgv\projetos vs\trabalhoap\trabalhoap\main.cpp(113): error C3861: 'registroF': identifier not found
+c:\users\karbust\onedrive - estgv\projetos vs\trabalhoap\trabalhoap\main.cpp(117): error C3861: 'registroS': identifier not found
+c:\users\karbust\onedrive - estgv\projetos vs\trabalhoap\trabalhoap\main.cpp(126): error C2059: syntax error: ')'
+c:\users\karbust\onedrive - estgv\projetos vs\trabalhoap\trabalhoap\main.cpp(129): error C2065: 's': undeclared identifier
+c:\users\karbust\onedrive - estgv\projetos vs\trabalhoap\trabalhoap\main.cpp(129): error C2059: syntax error: ')'
+c:\users\karbust\onedrive - estgv\projetos vs\trabalhoap\trabalhoap\main.cpp(129): error C2143: syntax error: missing ';' before '{'
+c:\users\karbust\onedrive - estgv\projetos vs\trabalhoap\trabalhoap\main.cpp(133): error C2181: illegal else without matching if
+c:\users\karbust\onedrive - estgv\projetos vs\trabalhoap\trabalhoap\main.cpp(134): error C2065: 's': undeclared identifier
+c:\users\karbust\onedrive - estgv\projetos vs\trabalhoap\trabalhoap\main.cpp(134): error C2059: syntax error: ')'
+c:\users\karbust\onedrive - estgv\projetos vs\trabalhoap\trabalhoap\main.cpp(134): error C2143: syntax error: missing ';' before '{'
+c:\users\karbust\onedrive - estgv\projetos vs\trabalhoap\trabalhoap\main.cpp(135): error C2065: 's': undeclared identifier
+c:\users\karbust\onedrive - estgv\projetos vs\trabalhoap\trabalhoap\main.cpp(135): error C2059: syntax error: ')'
+c:\users\karbust\onedrive - estgv\projetos vs\trabalhoap\trabalhoap\main.cpp(137): error C2181: illegal else without matching if
+c:\users\karbust\onedrive - estgv\projetos vs\trabalhoap\trabalhoap\main.cpp(138): error C2065: 's': undeclared identifier
+c:\users\karbust\onedrive - estgv\projetos vs\trabalhoap\trabalhoap\main.cpp(174): warning C4477: 'scanf' : format string '%i' requires an argument of type 'int *', but variadic argument 1 has type 'char (*)[10]'
+  c:\users\karbust\onedrive - estgv\projetos vs\trabalhoap\trabalhoap\main.cpp(174): note: consider using '%hhi' in the format string
+c:\users\karbust\onedrive - estgv\projetos vs\trabalhoap\trabalhoap\main.cpp(176): warning C4477: 'scanf' : format string '%i' requires an argument of type 'int *', but variadic argument 1 has type 'char (*)[16]'
+  c:\users\karbust\onedrive - estgv\projetos vs\trabalhoap\trabalhoap\main.cpp(176): note: consider using '%hhi' in the format string
