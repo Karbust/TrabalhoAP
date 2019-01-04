@@ -17,13 +17,13 @@ typedef struct Clientes {
 typedef struct Contratados {
 	int data;
 	char necessidade[50];
+	char equipamento[50];
+	char estado[20];
 }*CONTRATADOS;
 
 typedef struct Servicos {
 	int codigo;
 	char descricao[100];
-	char equipamento[50];
-	char estado[20];
 	double preco;
 }*SERVICOS;
 
@@ -42,7 +42,7 @@ void inicializa(CLIENTES *c, int n) {
 	int i;
 
 	for (i = 0; i < n; i++) {
-		(c++)->existe = 0;
+		(*c++)->existe = 0;
 	}
 }
 
@@ -185,9 +185,40 @@ double calculaValor(SERVICOS s, double valor) {
 int main() {
 	setlocale(LC_ALL, "Portuguese");
 
-	CLIENTES cliente[30];
-	FUNCIONARIO funcionario[20];
-	SERVICOS servico[15];
+	CLIENTES *cliente[250];
+	FUNCIONARIO *funcionario[20];
+	SERVICOS *servico[15];
+	char linha[256];
+	int i;
+	i = 0;
+
+	FILE *file_clientes;
+	FILE *file_funcionarios;
+	FILE *file_servicos;
+
+	file_clientes = fopen("Clientes.dat", "r");
+	while (fgets(linha, sizeof(linha), file_clientes))
+	{
+		fscanf(file_clientes, "%d,%s,%d,%s,%d,%d", &(*cliente[i])->codigo, (*cliente[i])->nome, (*cliente[i])->nif, (*cliente[i])->morada, (*cliente[i])->contato, (*cliente[i])->nif);
+		i++;
+	}
+	i = 0;
+	file_funcionarios = fopen("Funcionarios.dat", "r");
+	while (fgets(linha, sizeof(linha), file_funcionarios))
+	{
+		fscanf(file_funcionarios, "%d,%s,%s", &(*funcionario[i])->id, (*funcionario[i])->login, (*funcionario[i])->password);
+		i++;
+	}
+	i = 0;
+	file_servicos = fopen("Servicos.dat", "r");
+	while (fgets(linha, sizeof(linha), file_servicos))
+	{
+		fscanf(file_servicos, "%d,%s,%f", &(*servico[i])->codigo, (*servico[i])->descricao, (*servico[i])->preco);
+		i++;
+	}
+
+	fcloseall();
+
 	int totalDeClientes, totalDeServicos;
 	double valor;
 	char nome[50], nome2[50];
